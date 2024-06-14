@@ -7,32 +7,32 @@
     </div>
   <% end %>
 
-  <%= form_with(url: user_path(@user['id']), method: :patch, local: true, class: "form") do |form| %>
+  <%= form_tag(user_path(@user['id']), method: :patch, class: "form") do %>
     <div class="form-group">
-      <label for="user_name">Name</label>
-      <input type="text" id="user_name" name="name" class="form-control" value="<%= @user['name'] %>">
+      <%= label_tag :name, 'Adı' %>
+      <%= text_field_tag 'name', @user['name'], class: 'form-control' %>
     </div>
 
     <div class="form-group">
-      <label for="user_email">Email</label>
-      <input type="email" id="user_email" name="email" class="form-control" value="<%= @user['email'] %>">
+      <%= label_tag :email, 'Email' %>
+      <%= email_field_tag 'email', @user['email'], class: 'form-control' %>
     </div>
 
     <div class="form-group">
-      <label for="user_username">Username</label>
-      <input type="text" id="user_username" name="username" class="form-control" value="<%= @user['username'] %>">
+      <%= label_tag :username, 'Kullanıcı Adı' %>
+      <%= text_field_tag 'username', @user['username'], class: 'form-control' %>
     </div>
 
     <div class="form-group">
-      <label for="user_phone">Phone</label>
-      <input type="text" id="user_phone" name="phone" class="form-control" value="<%= @user['phone'] %>">
+      <%= label_tag :phone, 'Telefon' %>
+      <%= text_field_tag 'phone', @user['phone'], class: 'form-control' %>
     </div>
 
     <div class="form-group">
-      <label for="user_website">Website</label>
-      <input type="text" id="user_website" name="website" class="form-control" value="<%= @user['website'] %>">
+      <%= label_tag :website, 'Web Sitesi' %>
+      <%= text_field_tag 'website', @user['website'], class: 'form-control' %>
     </div>
 
-    <button type="submit" class="btn btn-primary">Güncelle</button>
+    <%= submit_tag 'Güncelle', class: 'btn btn-primary' %>
   <% end %>
 </div>

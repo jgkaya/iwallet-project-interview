@@ -28,12 +28,14 @@ class UsersController < ApplicationController
   def update
     @user = fetch_user(params[:id])
     if @user.update(user_params)
-      flash[:success] = "Kullanıcı bilgileri başarıyla güncellendi."
+      flash[:notice] = 'Kullanıcı başarıyla güncellendi.'
       redirect_to user_path(@user['id'])
     else
-      render 'edit'
+      flash.now[:alert] = 'Kullanıcı güncellenirken bir hata oluştu.'
+      render :edit
     end
   end
+
   def search
     if params[:query].present?
       @users = fetch_users_by_username(params[:query])

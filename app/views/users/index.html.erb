@@ -8,11 +8,11 @@
   <% end %>
 
   <% if @users.present? %>
-    <div class="row">
+    <div class="user-list">
       <% @users.each do |user| %>
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card h-100">
-            <a href="<%= user_path(user['id']) %>"> <!-- Link to user show page -->
+        <div class="card">
+          <%= link_to user_path(user['id']) do %>
+            <div class="card-body">
               <div class="d-flex align-items-center justify-content-center bg-secondary" style="height: 150px;">
                 <% if @user_image_map[user['id']] && @user_image_map[user['id']]['download_url'] %>
                   <img src="<%= @user_image_map[user['id']]['download_url'] %>" class="rounded-circle user-photo" alt="<%= user['name'] %>">
@@ -20,12 +20,13 @@
                   <div class="user-photo-placeholder rounded-circle"></div>
                 <% end %>
               </div>
-              <div class="card-body text-center">
-                <h5 class="card-title"><%= "#{user['name']} (#{user['username']})" %></h5>
-                <%= link_to "Düzenle", edit_user_path(user['id']), class: "btn btn-sm btn-outline-primary" %>
+              <div class="mt-3 text-center">
+                <p><strong>Ad-Soyad:</strong> <%= user['name'] %></p>
+                <p><strong>Username:</strong> <%= user['username'] %></p>
+                <%= link_to "Düzenle", edit_user_path(user['id']), class: "btn btn-sm btn-outline-primary btn-edit mt-2" %>
               </div>
-            </a>
-          </div>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>
