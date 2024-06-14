@@ -46,4 +46,18 @@ Kullanıcılar listelenmekte ve her bir kullanıcı için düzenle butonu gözü
   
   ![image](https://github.com/jgkaya/iwallet-project-interview/assets/147056872/6b5564eb-f066-49f2-9359-11c75bb0db14)
 
+- Temizle butonuna basılınca listeleme ekranına geri gelmektedir.
+- Bir kullanıcnın düzenle butonuna basarsak;
+
+  ![image](https://github.com/jgkaya/iwallet-project-interview/assets/147056872/ffb9ef07-9b98-4bc2-9125-7a0fc460d448)
+
+- Kullanıcının adının üstüne tıklayınca kullanıcı hakkında bilgiler verilir;
+
+  ![image](https://github.com/jgkaya/iwallet-project-interview/assets/147056872/8b629804-aa35-438c-a303-e93363c163d4)
+
+  Albüm kısımındaki her linke tıklandığında o albümün fotoğrafları gelmektedir;
+
+  ![image](https://github.com/jgkaya/iwallet-project-interview/assets/147056872/6a99b307-c76e-4246-b8bd-877d12bca757)
+
+
 
