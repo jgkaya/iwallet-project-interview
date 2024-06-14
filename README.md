@@ -1,28 +1,10 @@
-<<<<<<< HEAD
-# iwallet-project-interview
-=======
-# README
+# iWallet Project Interview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bu proje, iWallet mülakat sürecinde yapılan bir web uygulamasıdır. Kullanıcı yönetimi üzerine odaklanmıştır.
 
-Things you may want to cover:
+## Kullanılan Teknolojiler
 
-* Ruby version
+- Ruby on Rails
+- HTML/CSS
+- JavaScript
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
->>>>>>> 43838ae (final project)
