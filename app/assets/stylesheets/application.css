@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  overflow: hidden;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-photo-placeholder {
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.card-text {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+.user-photo {
+  width: 120px; /* Adjust as needed */
+  height: 120px; /* Adjust as needed */
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.user-photo-placeholder {
+  background-color: #eee;
+  width: 120px; /* Adjust as needed */
+  height: 120px; /* Adjust as needed */
+}
+
+.user-name {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.user-username {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #666;
+}
+
+.edit-button {
+  margin-left: auto; /* Düzenle butonunu sağa hizala */
+}

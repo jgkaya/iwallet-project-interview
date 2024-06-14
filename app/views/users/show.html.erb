@@ -1,0 +1,88 @@
+<!-- app/views/users/show.html.erb -->
+<div class="container">
+  <h1><%= @user['name'] %></h1>
+
+  <div class="user-details">
+    <p><strong>Username:</strong> <%= @user['username'] %></p>
+    <p><strong>Email:</strong> <%= @user['email'] %></p>
+
+    <% if @user_image.present? %>
+      <img src="<%= @user_image['download_url'] %>" alt="User Image" style="width: 200px;">
+    <% end %>
+
+    <h2>Albums</h2>
+    <% if @albums.present? %>
+      <ul>
+        <% @albums.each do |album| %>
+          <li>
+            <%= link_to album['title'], '#', class: 'album-link', data: { album_id: album['id'] } %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>No albums found.</p>
+    <% end %>
+  </div>
+</div>
+
+<div id="album-details-popup" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="album-title"></h2>
+    <ul id="album-photos"></ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('album-details-popup');
+    var albumLinks = document.querySelectorAll('.album-link');
+
+    albumLinks.forEach(function(link) {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        var albumId = link.dataset.albumId;
+        showAlbumDetails(albumId);
+      });
+    });
+
+    function showAlbumDetails(albumId) {
+      var url = "https://jsonplaceholder.typicode.com/albums/" + albumId + "/photos";
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          var albumTitle = document.getElementById('album-title');
+          var albumPhotos = document.getElementById('album-photos');
+
+          albumTitle.textContent = "Photos of Album ID: " + albumId;
+          albumPhotos.innerHTML = '';
+
+          data.forEach(function(photo) {
+            var li = document.createElement('li');
+            var img = document.createElement('img');
+            img.src = photo.url;
+            img.alt = photo.title;
+            img.style.width = '100px';
+            li.appendChild(img);
+            li.appendChild(document.createTextNode(photo.title));
+            albumPhotos.appendChild(li);
+          });
+
+          modal.style.display = "block";
+        })
+        .catch(error => console.error('Error fetching album photos:', error));
+    }
+
+    var closeButton = document.getElementsByClassName('close')[0];
+    closeButton.addEventListener('click', function() {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener('click', function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+</script>
