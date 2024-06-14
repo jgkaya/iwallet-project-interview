@@ -11,16 +11,20 @@ Bu proje, iWallet mülakat sürecinde yapılan bir web uygulamasıdır. Kullanı
 ## Kurulum
 
 - Depoyu klonlayın:
-  https://github.com/jgkaya/iwallet-project-interview.git
-  cd iwallet-project-interview
+  ```bash
+  $ git clone https://github.com/jgkaya/iwallet-project-interview.git
+  $ cd iwallet-project-interview
 - Bağımlılıkları yükleme:
   Ruby ve Ruby on Rails'in kurulu olduğundan emin olun. Ardından, gerekli gem'leri yükleyin:
-  bundle install
+  ```bash
+  $ bundle install
 - Veritabanını ayarlama:
-  rails db:create
-  rails db:migrate
+  ```bash
+  $ rails db:create
+  $ rails db:migrate
 - Sunucuyu başlatın:
-  rails server
+  ```bash
+  $ rails server
 - Uygulamaya erişin:
   Web tarayıcınızı açın ve uygulamanın çalıştığını görmek için http://localhost:3000 adresine gidin.
 
