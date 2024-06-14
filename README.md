@@ -32,7 +32,7 @@ Bu proje, iWallet mülakat sürecinde yapılan bir web uygulamasıdır. Kullanı
 
 - Uygulama UsersPage sayfası ile başlamaktadır;
 
-  ![image](https://github.com/jgkaya/iwallet-project-interview/assets/147056872/8b5c4055-7d79-489f-b79e-2e8017dddd8a)
+  ![image](https://github.com/jgkaya/iwallet-project-interview/assets/147056872/c8df0e70-36bc-400d-ae37-a34fc687117c)
 
 Kullanıcılar listelenmekte ve her bir kullanıcı için düzenle butonu gözükmektedir. 
 
