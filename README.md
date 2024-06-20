@@ -40,7 +40,7 @@ Kullanıcılar listelenmekte ve her bir kullanıcı için düzenle butonu gözü
   
   ![image](https://github.com/jgkaya/iwallet-project-interview/assets/147056872/fcea4bc8-55c1-4f3b-ba73-b3d4a9d97646)
   
-  ![image](https://github.com/jgkaya/iwallet-project-interview/assets/147056872/910d20ab-e11c-443d-b83c-5810b0316d3b)
+  ![image](https://github.com/jgkaya/iwallet-project-interview/assets/147056872/67325b3f-ba55-42ff-a447-32624de7d678)
 
   Ancak kullanıcı adı yoksa şu hata vermektedir;
   
